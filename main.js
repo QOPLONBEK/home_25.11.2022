@@ -1,4 +1,4 @@
-// const Unlilar = ["a", "e", "i", "o", "u"]
+const Unlilar = ["a", "e", "i", "o", "u"]
 
 function unlilarniHisoblash(str)
 {
