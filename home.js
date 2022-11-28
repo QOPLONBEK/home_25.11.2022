@@ -57,8 +57,16 @@
     // console.log(getLastItem(["cat", "dog", "duck"]))
     // console.log(getLastItem(["ture", "false", "ture"]))
     
-    
-    
-    
-    // he;;p
+                                            //////////////////   3 - usuli   ///////////////////////
 
+    function getLastItem(array, n) {
+        if (array == null) 
+          return void 0;
+        else if (n == null) 
+           return array[array.length - 1];
+        return array.slice(Math.max(array.length - n, 0));  
+    };
+      
+        console.log(getLastItem([1,2,3]))
+        console.log(getLastItem(["cat", "dog", "duck"]))
+        console.log(getLastItem(["ture", "false", "ture"]))
