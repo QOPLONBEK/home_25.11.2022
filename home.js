@@ -59,14 +59,32 @@
     
                                             //////////////////   3 - usuli   ///////////////////////
 
-    function getLastItem(array, n) {
-        if (array == null) 
-          return void 0;
-        else if (n == null) 
-           return array[array.length - 1];
-        return array.slice(Math.max(array.length - n, 0));  
-    };
+    // function getLastItem(array, num) {
+    //     if (array == null) 
+    //       return void 0;
+    //     else if (num == null) 
+    //        return array[array.length - 1];
+    //     return array.slice(Math.max(array.length - num, 0));  
+    // };
       
-        console.log(getLastItem([1,2,3]))
-        console.log(getLastItem(["cat", "dog", "duck"]))
-        console.log(getLastItem(["ture", "false", "ture"]))
+        // console.log(getLastItem([1,2,3]))
+        // console.log(getLastItem(["cat", "dog", "duck"]))
+        // console.log(getLastItem(["ture", "false", "ture"]))
+
+                                            ///////////////// 4 - usuli  ///////////////////////////////////
+
+    function getLastItem(arr, num){
+        if(num == null){
+            return arr[arr.length-1]
+        }
+        else if(num > 0 && num < arr.length){
+            return arr.slice(arr.length-num, arr.length)
+        }
+        else if(num > arr.length){
+             return arr
+        }
+    }
+
+    console.log(getLastItem([1,2,3]))
+    console.log(getLastItem(["cat", "dog", "duck"]))
+    console.log(getLastItem(["ture", "false", "ture"]))
